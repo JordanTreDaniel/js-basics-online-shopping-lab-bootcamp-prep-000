@@ -44,7 +44,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   for (var i in cart) {
-    if ( Object.keys(cart[i]).includes(item)) {
+    if ( Object.getOwnPropertyNames(cart[i]).includes(item)) {
       cart.splice(i, 1);
       return;
     }
