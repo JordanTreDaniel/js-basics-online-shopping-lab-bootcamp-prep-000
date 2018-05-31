@@ -44,9 +44,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   for (var i in cart) {
-    console.log(Object.keys(cart[i]).itemName);
     if ( Object.keys(cart[i]).itemName == item ) {
-      alert (Object.keys(cart[i]).itemName);
       cart.splice(i, 1);
       return;
     }
@@ -55,5 +53,5 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if cardNumber.length > 0
 }
