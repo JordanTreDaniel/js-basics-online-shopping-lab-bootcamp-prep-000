@@ -44,7 +44,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   for (var i in cart) {
-    if ( Object.keys(cart[i]).itemName == item ) {
+    if ( Object.keys(cart[i]).includes(item)) {
       cart.splice(i, 1);
       return;
     }
@@ -54,7 +54,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   if (cardNumber) {
-    var str = `Your total cost is $${total()}, which will be charge to the card ${cardNumber}.`;
+    var str = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
     cart = [];
     return str;
   } else {
